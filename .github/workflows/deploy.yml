@@ -32,3 +32,6 @@ jobs:
       - name: Déployer sur Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          timeout: 1800000
+          error_count: 50
