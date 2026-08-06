@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de Khaly Magatte Bane — Géomaticien & Technicien SIG. Administration SIG (QGIS, PostGIS/SQL), webmapping, cartographie thématique et télédétection au service des collectivités territoriales." />
+  <title>Khaly Magatte Bane — Géomaticien &amp; Technicien SIG / Télédétection</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner boxed">
+      <a class="nav-logo" href="#top">KMB</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#experience">Expériences</a></li>
+        <li><a href="#results">Résultats</a></li>
+        <li><a href="#cartographie">Cartographie</a></li>
+        <li><a href="#documents">Documents</a></li>
+        <li><a href="#formation">Formation</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <i class="bx bx-menu" id="navIcon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <canvas id="radarCanvas"></canvas>
+    <div class="hero-inner boxed">
+      <div class="hero-content">
+        <p class="hero-label">JE SUIS</p>
+        <h1 class="hero-title">KHALY MAGATTE<br><span class="hero-name-accent">BANE</span></h1>
+        <p class="hero-subtitle">Géomaticien — SIG, Cartographie &amp; Télédétection</p>
+        <p class="hero-description">
+          Master 2 Géomatique &amp; Modélisation Spatiale (Aix-Marseille Université). Spécialisé en administration SIG (QGIS, SQL/PostGIS), webmapping, cartographie thématique et traitement d'imagerie satellitaire (Sentinel-1/2, Landsat). Passionné par l'aménagement du territoire et la gestion des données géospatiales au service des collectivités locales.
+        </p>
+        <div class="hero-badge-row">
+          <span class="hero-avail"><span class="hero-dot"></span>Disponible dès septembre 2026</span>
+          <span class="hero-loc"><i class="bx bx-map-pin"></i> Marseille · Mobilité France</span>
+        </div>
+        <div class="hero-actions">
+          <a href="CV_Khaly_Magatte_BANE.pdf" class="btn-primary" download>
+            <i class="bx bx-download"></i>&nbsp;Télécharger mon CV
+          </a>
+          <a href="https://linkedin.com/in/khaly-magatte-bane-173724242" target="_blank" rel="noopener" class="btn-outline">
+            <i class="bx bxl-linkedin"></i>&nbsp;LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-img-ring">
+          <img src="assets/img/profil.jpg" alt="Khaly Magatte Bane — Géomaticien" />
+        </div>
+        <div class="hero-tags-float">
+          <span>QGIS · PostGIS/SQL</span>
+          <span>Webmapping &amp; Dashboards</span>
+          <span>Sentinel-1/2</span>
+          <span>Python · R</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Défiler</span>
+    </div>
+  </section>
+
+  <!-- ===== À PROPOS ===== -->
+  <section class="section section-apropos" id="apropos">
+    <div class="boxed">
+      <div class="apropos-grid">
+        <div class="apropos-left">
+          <span class="section-kicker">QUI SUIS-JE</span>
+          <h2>À propos<br>de moi</h2>
+          <div class="apropos-stats">
+            <div class="astat"><span class="astat-num">3+</span><span class="astat-label">Ans de formation</span></div>
+            <div class="astat"><span class="astat-num">6</span><span class="astat-label">Mois de stage recherche</span></div>
+            <div class="astat"><span class="astat-num">4+</span><span class="astat-label">Projets réalisés</span></div>
+          </div>
+        </div>
+        <div class="apropos-right">
+          <p>
+            Géomaticien passionné par l'analyse spatiale et la télédétection, je combine des méthodes de traitement d'images satellitaires avancées avec des outils de machine learning pour répondre à des problématiques environnementales et territoriales.
+          </p>
+          <p>
+            Actuellement en Master 2 Géomatique &amp; Modélisation Spatiale à Aix-Marseille Université, je combine une solide maîtrise des outils SIG territoriaux (QGIS, PostGIS, bases de données spatiales) avec des méthodes d'analyse spatiale et de télédétection appliquées aux enjeux d'aménagement et d'environnement. Je viens d'achever un stage de recherche de 6 mois au laboratoire <strong>EDYSAN (UMR7058, CNRS-UPJV)</strong> à Amiens, portant sur la cartographie des pratiques agricoles et de l'érosion hydrique via des séries temporelles Sentinel-1 et Sentinel-2.
+          </p>
+          <p>
+            Mon objectif est de mettre la géomatique au service des enjeux climatiques, agricoles et environnementaux, en produisant des analyses spatiales rigoureuses et des outils d'aide à la décision pour les collectivités et acteurs du territoire.
+          </p>
+          <div class="apropos-highlights">
+            <div class="ahighlight">
+              <span class="ah-icon">🗺️</span>
+              <div><strong>SIG &amp; Webmapping</strong><span>QGIS, ArcGIS Pro, PostGIS/SQL, Leaflet, Folium, cartographie thématique</span></div>
+            </div>
+            <div class="ahighlight">
+              <span class="ah-icon">📊</span>
+              <div><strong>Analyse Spatiale &amp; Data</strong><span>Gestion de données multi-sources (cadastre, réseaux, environnement), Python, R</span></div>
+            </div>
+            <div class="ahighlight">
+              <span class="ah-icon">📡</span>
+              <div><strong>Télédétection &amp; Imagerie</strong><span>Sentinel-1/2, Landsat, séries temporelles, suivi du territoire</span></div>
+            </div>
+          </div>
+          <div class="apropos-langs">
+            <span class="lang-badge fr">🇫🇷 Français — C1</span>
+            <span class="lang-badge en">🇬🇧 Anglais — B2</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPÉTENCES ===== -->
+  <section class="section section-competences" id="competences">
+    <div class="boxed text-center">
+      <span class="section-kicker section-kicker-light">EXPERTISES</span>
+      <h2>Mes compétences</h2>
+      <p class="section-sub">Des outils et méthodes au service de l'analyse spatiale et environnementale.</p>
+
+      <div class="skills-cards-grid">
+
+        <!-- 1 · SIG & WEBMAPPING -->
+        <div class="skill-card-v2">
+          <div class="skv2-img-wrap">
+            <img src="assets/img/sigweb.webp" alt="SIG et Webmapping" />
+            <div class="skv2-img-overlay"></div>
+          </div>
+          <div class="skv2-body">
+            <h3>SIG, Webmapping &amp; Gestion de Données</h3>
+            <p class="skv2-short">Administration de données territoriales (cadastre, réseaux, PLU), cartographie thématique et développement d'applications web interactives.</p>
+            <div class="skv2-more">
+              <p>Conception de cartes thématiques opérationnelles et interfaces de visualisation spatiale. Structuration des données (formats, SRS) et diffusion via outils webmapping pour des usages terrain et décisionnels.</p>
+            </div>
+            <button class="skill-toggle" type="button">En savoir plus…</button>
+          </div>
+          <div class="skv2-levels">
+            <div class="lvl-item">
+              <div class="lvl-head"><span>QGIS</span><span class="lvl-badge expert">Expert</span></div>
+              <div class="lvl-bar"><div class="lvl-fill" data-w="92"></div></div>
+            </div>
+            <div class="lvl-item">
+              <div class="lvl-head"><span>ArcGIS Pro</span><span class="lvl-badge avance">Avancé</span></div>
+              <div class="lvl-bar"><div class="lvl-fill" data-w="80"></div></div>
+            </div>
+            <div class="lvl-item">
+              <div class="lvl-head"><span>Leaflet / Folium</span><span class="lvl-badge intermediaire">Intermédiaire</span></div>
+              <div class="lvl-bar"><div class="lvl-fill" data-w="68"></div></div>
+            </div>
+            <div class="lvl-item">
+              <div class="lvl-head"><span>Idrisi TerrSet</span><span class="lvl-badge intermediaire">Intermédiaire</span></div>
+              <div class="lvl-bar"><div class="lvl-fill" data-w="65"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 · ANALYSE SPATIALE, BASES DE DONNÉES & SQL -->
+        <div class="skill-card-v2">
+          <div class="skv2-img-wrap">
+            <img src="assets/img/spatial-analyse.jpg" alt="Analyse spatiale et bases de données" />
+            <div class="skv2-img-overlay"></div>
+          </div>
+          <div class="skv2-body">
+            <h3>Analyse spatiale, Bases de Données &amp; SQL</h3>
+            <p class="skv2-short">Bases de données spatiales (PostGIS/SQL), analyses multicritères et statistiques spatiales pour produire des diagnostics territoriaux d'aide à la décision.</p>
+            <div class="skv2-more">
+              <p>Mobilisation de l'analyse multicritère, de la modélisation RUSLE, des statistiques spatiales et de la lecture croisée de phénomènes (érosion, occupation des sols, risques climatiques). Hypothèses et limites méthodologiques documentées.</p>
+            </div>
+            <button class="skill-toggle" type="button">En savoir plus…</button>
+          </div>
+          <div class="skv2-levels">
+            <div class="lvl-item">
+              <div class="lvl-head"><span>PostGIS / SQL spatial</span><span class="lvl-badge avance">Avancé</span></div>
+              <div class="lvl-bar"><div class="lvl-fill" data-w="78"></div></div>
+            </div>
+            <div class="lvl-item">
+              <div class="lvl-head"><span>Analyse multicritère</span><span class="lvl-badge avance">Avancé</span></div>
+              <div class="lvl-bar"><div class="lvl-fill" data-w="80"></div></div>
+            </div>
+            <div class="lvl-item">
+              <div class="lvl-head"><span>Modèle RUSLE</span><span class="lvl-badge expert">Expert</span></div>
+              <div class="lvl-bar"><div class="lvl-fill" data-w="92"></div></div>
+            </div>
+            <div class="lvl-item">
+              <div class="lvl-head"><span>Statistiques spatiales</span><span class="lvl-badge avance">Avancé</span></div>
+              <div class="lvl-bar"><div class="lvl-fill" data-w="78"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 · TÉLÉDÉTECTION -->
+        <div class="skill-card-v2">
+          <div class="skv2-img-wrap">
+            <img src="assets/img/teledetection.jpg" alt="Télédétection" />
+            <div class="skv2-img-overlay"></div>
+          </div>
+          <div class="skv2-body">
+            <h3>Télédétection &amp; Séries temporelles</h3>
+            <p class="skv2-short">Images satellites optiques et radar, séries temporelles, indices spectraux pour l'analyse des dynamiques environnementales.</p>
+            <div class="skv2-more">
+              <p>Traitement de séries temporelles Sentinel-1 (SAR) et Sentinel-2 (optique) : prétraitements sous SNAP, calcul d'indices (NDVI, NDWI, BSI), détection de changements, suivi phénologique et classification d'occupation du sol.</p>
+            </div>
+            <button class="skill-toggle" type="button">En savoir plus…</button>
+          </div>
+          <div class="skv2-levels">
+            <div class="lvl-item">
+              <div class="lvl-head"><span>Sentinel-1 / SAR</span><span class="lvl-badge expert">Expert</span></div>
+              <div class="lvl-bar"><div class="lvl-fill" data-w="90"></div></div>
+            </div>
+            <div class="lvl-item">
+              <div class="lvl-head"><span>Sentinel-2 / Optique</span><span class="lvl-badge expert">Expert</span></div>
+              <div class="lvl-bar"><div class="lvl-fill" data-w="88"></div></div>
+            </div>
+            <div class="lvl-item">
+              <div class="lvl-head"><span>Landsat</span><span class="lvl-badge avance">Avancé</span></div>
+              <div class="lvl-bar"><div class="lvl-fill" data-w="80"></div></div>
+            </div>
+            <div class="lvl-item">
+              <div class="lvl-head"><span>SNAP (ESA)</span><span class="lvl-badge avance">Avancé</span></div>
+              <div class="lvl-bar"><div class="lvl-fill" data-w="82"></div></div>
+            </div>
+            <div class="lvl-item">
+              <div class="lvl-head"><span>Indices spectraux</span><span class="lvl-badge expert">Expert</span></div>
+              <div class="lvl-bar"><div class="lvl-fill" data-w="85"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 · PROGRAMMATION & ML -->
+        <div class="skill-card-v2">
+          <div class="skv2-img-wrap">
+            <img src="assets/img/icon python.webp" alt="Python et Machine Learning" />
+            <div class="skv2-img-overlay"></div>
+          </div>
+          <div class="skv2-body">
+            <h3>Programmation &amp; Machine Learning</h3>
+            <p class="skv2-short">Scripts et pipelines Python/R pour automatiser les géotraitements et modéliser les dynamiques spatiales par apprentissage automatique.</p>
+            <div class="skv2-more">
+              <p>Classification supervisée (Random Forest, XGBoost) pour détecter le travail du sol, cartographier l'occupation des terres et évaluer les risques. Chaînes de traitement reproductibles et documentées.</p>
+            </div>
+            <button class="skill-toggle" type="button">En savoir plus…</button>
+          </div>
+          <div class="skv2-levels">
+            <div class="lvl-item">
+              <div class="lvl-head"><span>Python (rasterio, GeoPandas…)</span><span class="lvl-badge expert">Expert</span></div>
+              <div class="lvl-bar"><div class="lvl-fill" data-w="88"></div></div>
+            </div>
+            <div class="lvl-item">
+              <div class="lvl-head"><span>R</span><span class="lvl-badge avance">Avancé</span></div>
+              <div class="lvl-bar"><div class="lvl-fill" data-w="75"></div></div>
+            </div>
+            <div class="lvl-item">
+              <div class="lvl-head"><span>XGBoost / Random Forest</span><span class="lvl-badge avance">Avancé</span></div>
+              <div class="lvl-bar"><div class="lvl-fill" data-w="82"></div></div>
+            </div>
+            <div class="lvl-item">
+              <div class="lvl-head"><span>SQL</span><span class="lvl-badge intermediaire">Intermédiaire</span></div>
+              <div class="lvl-bar"><div class="lvl-fill" data-w="65"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPÉRIENCES & PROJETS ===== -->
+  <section class="section section-experience" id="experience">
+    <div class="boxed">
+      <div class="exp-header">
+        <span class="section-kicker">PARCOURS</span>
+        <h2>Expériences &amp; Projets</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Févr. — Août 2026 · 6 mois</div>
+          <div class="timeline-card">
+            <span class="tcard-badge research">Recherche</span>
+            <h3>Stage de Recherche</h3>
+            <h4>Cartographie des Pratiques Agricoles &amp; de l'Érosion Hydrique</h4>
+            <div class="tcard-org">
+              <span><i class="bx bx-building"></i> UMR EDYSAN CNRS 7058, UPJV Amiens</span>
+              <span><i class="bx bx-user"></i> Encadrants : Marianne Laslier, Ronan Marrec</span>
+            </div>
+            <ul class="stage-missions-list">
+              <li><span class="stage-bullet"></span>Développement d'indicateurs spatiaux à partir de séries temporelles <strong>Sentinel-1 (radar)</strong> et <strong>Sentinel-2 (optique)</strong></li>
+              <li><span class="stage-bullet"></span>Traitement d'images satellites et prétraitements sous <strong>SNAP</strong> ; analyse spatiale <strong>Python/R</strong></li>
+              <li><span class="stage-bullet"></span>Cartographie des vulnérabilités territoriales face aux risques climatiques et à l'érosion hydrique</li>
+              <li><span class="stage-bullet"></span>Modélisation par <strong>Machine Learning</strong> (XGBoost, Random Forest) pour détecter le travail du sol à partir de données Sentinel-1/2</li>
+            </ul>
+            <div class="tcard-tags-row"><span>Sentinel-1</span><span>Sentinel-2</span><span>SNAP</span><span>XGBoost</span><span>Random Forest</span><span>Python</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Sept. 2024 — Juin 2025</div>
+          <div class="timeline-card">
+            <span class="tcard-badge academic">Académique</span>
+            <h3>Mémoire de Master 1</h3>
+            <h4>Dynamiques d'Occupation des Sols autour de Sites Miniers (Sénégal)</h4>
+            <div class="tcard-org">
+              <span><i class="bx bx-graduation"></i> Aix-Marseille Université</span>
+            </div>
+            <ul class="stage-missions-list">
+              <li><span class="stage-bullet"></span>Analyse diachronique de l'occupation des sols par télédétection <strong>Landsat &amp; Sentinel</strong></li>
+              <li><span class="stage-bullet"></span>Classification supervisée (<strong>Random Forest</strong>) ; évaluation par matrice de confusion et indice kappa</li>
+              <li><span class="stage-bullet"></span>Évaluation des pressions anthropiques et des impacts environnementaux autour de sites miniers</li>
+            </ul>
+            <div class="tcard-tags-row"><span>Landsat</span><span>Sentinel</span><span>Random Forest</span><span>Analyse diachronique</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Janvier 2025</div>
+          <div class="timeline-card">
+            <span class="tcard-badge workshop">Atelier</span>
+            <h3>Atelier Professionnel — Risques des Feux de Forêts</h3>
+            <h4></h4>
+            <div class="tcard-org">
+              <span><i class="bx bx-graduation"></i> Aix-Marseille Université</span>
+            </div>
+            <ul class="stage-missions-list">
+              <li><span class="stage-bullet"></span>Cartographie du risque incendie par analyse spatiale et télédétection</li>
+              <li><span class="stage-bullet"></span>Intégration de données multi-sources et mesures GPS terrain</li>
+            </ul>
+            <div class="tcard-tags-row"><span>QGIS</span><span>Cartographie des risques</span><span>GPS</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2024</div>
+          <div class="timeline-card">
+            <span class="tcard-badge workshop">Atelier</span>
+            <h3>Atelier Professionnel — Télédétection &amp; Géomorphologie Littorale</h3>
+            <h4></h4>
+            <div class="tcard-org">
+              <span><i class="bx bx-water"></i> AMU OCEAN — Aix-Marseille Université</span>
+            </div>
+            <ul class="stage-missions-list">
+              <li><span class="stage-bullet"></span>Collecte de données terrain et cartographie des risques côtiers</li>
+              <li><span class="stage-bullet"></span>Analyse spatiale et rapport de synthèse cartographique</li>
+            </ul>
+            <div class="tcard-tags-row"><span>Géomorphologie</span><span>Littoral</span><span>Cartographie</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RÉSULTATS DE RECHERCHE ===== -->
+  <section class="section section-results" id="results">
+    <div class="boxed">
+      <div class="exp-header text-center">
+        <span class="section-kicker-pill">&#x25CF;&nbsp;STAGE EN COURS · 2026</span>
+        <h2>Résultats de recherche — Érosion hydrique</h2>
+        <p class="section-sub">Modélisation spatiale et cartographie parcellaire au service des politiques publiques territoriales (PCAET, urbanisme et gestion des sols) — agglomération du Saint-Quentinois</p>
+      </div>
+
+      <div class="results-context">
+        <div class="context-card">
+          <span class="ctx-icon">🎯</span>
+          <div>
+            <strong>Besoin identifié</strong>
+            <p>Les données régionales ne permettent pas de géolocaliser les causes des risques à l'échelle parcellaire. Ce travail produit une cartographie fine reliant pratiques agricoles, aléas climatiques et enjeux territoriaux pour orienter le <strong>PCAET</strong> et le <strong>Projet Alimentaire Territorial</strong>.</p>
+          </div>
+        </div>
+        <div class="context-card">
+          <span class="ctx-icon">📐</span>
+          <div>
+            <strong>Zone d'étude</strong>
+            <p>Agglomération du Saint-Quentinois — <strong>22 669 ha</strong> de surface agricole, <strong>3 599 parcelles</strong> analysées sur la période 2022–2024.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rusle-block">
+        <div class="rusle-title">Modèle RUSLE — <em>Revised Universal Soil Loss Equation</em></div>
+        <div class="rusle-formula">
+          <span class="rusle-A">A</span>
+          <span class="rusle-eq">=</span>
+          <div class="rusle-factor r"><span class="factor-letter">R</span><span class="factor-name">Érosivité des pluies</span></div>
+          <span class="rusle-mul">×</span>
+          <div class="rusle-factor k"><span class="factor-letter">K</span><span class="factor-name">Érodibilité du sol</span></div>
+          <span class="rusle-mul">×</span>
+          <div class="rusle-factor ls"><span class="factor-letter">LS</span><span class="factor-name">Longueur &amp; pente</span></div>
+          <span class="rusle-mul">×</span>
+          <div class="rusle-factor c"><span class="factor-letter">C</span><span class="factor-name">Couverture du sol</span></div>
+          <span class="rusle-mul">×</span>
+          <div class="rusle-factor p"><span class="factor-letter">P</span><span class="factor-name">Pratiques conservatoires</span></div>
+        </div>
+        <p class="rusle-note">Résultat : Carte de perte en sol (t/ha/an) → Zones à risque élevé d'érosion hydrique</p>
+      </div>
+
+      <div class="stats-row">
+        <div class="kstat"><span class="kstat-num">52,6%</span><span class="kstat-label">des parcelles dépassent le seuil européen de 2 t/ha/an</span></div>
+        <div class="kstat"><span class="kstat-num">62,9%</span><span class="kstat-label">de la surface agricole affectée (14 249 ha)</span></div>
+        <div class="kstat"><span class="kstat-num">5,01 t/ha</span><span class="kstat-label">perte maximale enregistrée en 2023</span></div>
+        <div class="kstat"><span class="kstat-num">3 ans</span><span class="kstat-label">de données analysées : 2022, 2023, 2024</span></div>
+      </div>
+
+      <div class="results-table-wrap">
+        <h3 class="table-title">Cartographie parcellaire RUSLE 2024 — Distribution des pertes en sol</h3>
+        <div class="table-scroll">
+          <table class="results-table">
+            <thead>
+              <tr><th>Classe (t/ha/an)</th><th>Nb parcelles</th><th>% parcelles</th><th>Surface (ha)</th><th>% surface</th><th>Niveau de risque</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>0 – 2</td><td>1 705</td><td>47,4 %</td><td>8 421</td><td>37,1 %</td><td><span class="risk-badge low">Faible</span></td></tr>
+              <tr><td>2 – 5</td><td>983</td><td>27,3 %</td><td>7 756</td><td>34,2 %</td><td><span class="risk-badge moderate">Modéré</span></td></tr>
+              <tr><td>5 – 10</td><td>669</td><td>18,6 %</td><td>4 853</td><td>21,4 %</td><td><span class="risk-badge high">Élevé</span></td></tr>
+              <tr><td>10 – 15</td><td>190</td><td>5,3 %</td><td>1 464</td><td>6,5 %</td><td><span class="risk-badge very-high">Très élevé</span></td></tr>
+              <tr><td>&gt; 15</td><td>52</td><td>1,4 %</td><td>177</td><td>0,8 %</td><td><span class="risk-badge extreme">Extrême</span></td></tr>
+              <tr class="risk-total"><td><strong>Total ≥ 2</strong></td><td><strong>1 894</strong></td><td><strong>52,6 %</strong></td><td><strong>14 249</strong></td><td><strong>62,9 %</strong></td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">⚠ Plus d'une parcelle sur deux dépasse le seuil de tolérance européen (JRC/UE) de 2 t/ha/an.</p>
+      </div>
+
+      <h3 class="gallery-title">Galerie cartographique — Résultats RUSLE</h3>
+      <div class="gallery-grid">
+        <div class="gallery-item" data-index="0" data-src="assets/erosion/image5.png" data-caption="Facteurs K (érodibilité) et LS (longueur × pente). Source : Data.gouv / BD Alti, INRAE. Auteur : Bane, Khaly — UMR CNRS 7058 EDYSAN.">
+          <img src="assets/erosion/image5.png" alt="Facteurs K et LS" loading="lazy" />
+          <div class="gallery-overlay"><span>Facteurs K &amp; LS</span></div>
+        </div>
+        <div class="gallery-item" data-index="1" data-src="assets/erosion/image6.png" data-caption="Distribution spatiale du facteur R (érosivité des pluies) 2022–2024. Données Météo-France.">
+          <img src="assets/erosion/image6.png" alt="Facteur R" loading="lazy" />
+          <div class="gallery-overlay"><span>Facteur R — Érosivité (2022–2024)</span></div>
+        </div>
+        <div class="gallery-item" data-index="2" data-src="assets/erosion/image7.png" data-caption="Distribution spatiale du facteur C (couverture du sol) 2022–2024. Séries temporelles Sentinel-2.">
+          <img src="assets/erosion/image7.png" alt="Facteur C" loading="lazy" />
+          <div class="gallery-overlay"><span>Facteur C — Couverture (2022–2024)</span></div>
+        </div>
+        <div class="gallery-item" data-index="3" data-src="assets/erosion/image8.png" data-caption="Perte en sol annuelle RUSLE — 2022 (2,62 t/ha/an), 2023 (5,01 t/ha/an), 2024 (4,36 t/ha/an). Lambert 93 (EPSG 2154).">
+          <img src="assets/erosion/image8.png" alt="Perte annuelle RUSLE" loading="lazy" />
+          <div class="gallery-overlay"><span>Perte en sol annuelle (2022–2024)</span></div>
+        </div>
+        <div class="gallery-item" data-index="4" data-src="assets/erosion/image9.png" data-caption="Analyse de l'érosion à l'échelle saisonnière — variations intra-annuelles des facteurs RUSLE.">
+          <img src="assets/erosion/image9.png" alt="Analyse saisonnière" loading="lazy" />
+          <div class="gallery-overlay"><span>Analyse saisonnière de l'érosion</span></div>
+        </div>
+        <div class="gallery-item" data-index="5" data-src="assets/erosion/image11.png" data-caption="Heatmap mensuelle des facteurs RUSLE : R, C et A (2022–2024). Pic d'érosion : août 2023 (1,232 t/ha/mois).">
+          <img src="assets/erosion/image11.png" alt="Heatmap RUSLE" loading="lazy" />
+          <div class="gallery-overlay"><span>Heatmap mensuelle RUSLE</span></div>
+        </div>
+        <div class="gallery-item gallery-item-wide" data-index="6" data-src="assets/erosion/image12.png" data-caption="Cartographie parcellaire RUSLE 2024 — 3 599 parcelles, 22 669 ha. 52,6% dépassent 2 t/ha/an. Auteur : Bane, Khaly — UMR CNRS 7058 EDYSAN.">
+          <img src="assets/erosion/image12.png" alt="Carte parcellaire RUSLE 2024" loading="lazy" />
+          <div class="gallery-overlay"><span>Carte parcellaire RUSLE 2024 — Résultat principal</span></div>
+        </div>
+      </div>
+
+      <div class="refs-block">
+        <h4>Références scientifiques</h4>
+        <ul>
+          <li>Renard et al. (1997) — <em>Predicting Soil Erosion by Water (RUSLE)</em>, USDA Handbook No. 703</li>
+          <li>Panagos et al. (2015) — Rainfall erosivity in Europe, <em>Sci. Total Environ.</em>, 511, 801–814</li>
+          <li>Ghosh et al. (2023) — Integration of GIS and Remote Sensing with RUSLE, <em>Land</em>, 12, 116</li>
+          <li>Zeghmar et al. (2024) — ML approach for RUSLE-based soil erosion modeling, <em>Earth Sci. Inform.</em>, 17, 2921–2936</li>
+          <li>Jaman et al. (2025) — GeoAI-based soil erosion risk assessment, <em>Environ. Monit. Assess.</em>, 197, 901</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERIE CARTOGRAPHIQUE ===== -->
+  <section class="section section-cartographie" id="cartographie">
+    <div class="boxed">
+      <div class="exp-header text-center">
+        <span class="section-kicker">PRODUCTION CARTOGRAPHIQUE</span>
+        <h2>Galerie cartographique</h2>
+        <p class="section-sub">Sélection de cartes thématiques et d'analyses spatiales produites au fil de mes projets — occupation du sol, îlots de chaleur urbains et cartographie des risques.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item" data-src="assets/cartes/grenoble-icu-ilot-chaleur.png" data-caption="Carte synthétique de l'îlot de chaleur urbain (ICU) — commune de Grenoble. Indice ICU dérivé d'imagerie Sentinel-2 / Copernicus. Réalisation : K.M. Bane.">
+          <img src="assets/cartes/grenoble-icu-ilot-chaleur.png" alt="Îlot de chaleur urbain — Grenoble" loading="lazy" />
+          <div class="gallery-overlay"><span>Îlot de chaleur urbain (ICU) — Grenoble</span></div>
+        </div>
+        <div class="gallery-item" data-src="assets/cartes/graveson-occupation-sol-clc.png" data-caption="Carte d'occupation du sol de la commune de Graveson (Corine Land Cover). Cartographie thématique SIG à l'échelle communale.">
+          <img src="assets/cartes/graveson-occupation-sol-clc.png" alt="Occupation du sol — Graveson (CLC)" loading="lazy" />
+          <div class="gallery-overlay"><span>Occupation du sol — Graveson (CLC)</span></div>
+        </div>
+        <div class="gallery-item" data-src="assets/cartes/ndvi-feu-zone-incendiee.png" data-caption="Différence de NDVI avant / après incendie et délimitation de la zone incendiée. Cartographie des risques de feux de forêt.">
+          <img src="assets/cartes/ndvi-feu-zone-incendiee.png" alt="NDVI avant/après feu et zone incendiée" loading="lazy" />
+          <div class="gallery-overlay"><span>Impact d'incendie — NDVI &amp; zone incendiée</span></div>
+        </div>
+        <div class="gallery-item" data-src="assets/cartes/bouches-du-rhone-feuillus-massifs.png" data-caption="Part des feuillus dans les massifs des Bouches-du-Rhône. Analyse thématique départementale liée au risque de feux de forêt.">
+          <img src="assets/cartes/bouches-du-rhone-feuillus-massifs.png" alt="Part des feuillus — massifs des Bouches-du-Rhône" loading="lazy" />
+          <div class="gallery-overlay"><span>Feuillus dans les massifs — Bouches-du-Rhône</span></div>
+        </div>
+        <div class="gallery-item gallery-item-wide" data-src="assets/cartes/kaunas-occupation-sol-2024.png" data-caption="Classification de l'occupation du sol — agglomération de Kaunas (2024) : urbain, végétation, eau, cultures. Traitement d'imagerie Sentinel-2 sur fond OpenStreetMap.">
+          <img src="assets/cartes/kaunas-occupation-sol-2024.png" alt="Occupation du sol — Kaunas 2024" loading="lazy" />
+          <div class="gallery-overlay"><span>Occupation du sol — Kaunas 2024</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DOCUMENTS & TRAVAUX ===== -->
+  <section class="section section-documents" id="documents">
+    <div class="boxed">
+      <div class="exp-header">
+        <span class="section-kicker">PRODUCTIONS</span>
+        <h2>Travaux &amp; Documents</h2>
+        <p class="section-sub-left">Rapports, mémoires et productions SIG consultables et téléchargeables.</p>
+      </div>
+
+      <div class="docs-filters">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="memoire">Mémoire</button>
+        <button class="filter-btn" data-filter="analyse">Analyse</button>
+        <button class="filter-btn" data-filter="sig">SIG &amp; Cartographie</button>
+      </div>
+
+      <div class="docs-grid" id="docsGrid">
+
+        <div class="doc-card" data-cat="memoire">
+          <div class="doc-card-top">
+            <div class="doc-icon">
+              <i class="bx bxs-file-pdf"></i>
+            </div>
+            <span class="doc-badge memoire">Mémoire</span>
+          </div>
+          <div class="doc-body">
+            <h3>Mémoire de Master 1</h3>
+            <p>Dynamiques d'occupation des sols autour de sites miniers au Sénégal. Analyse diachronique par télédétection Landsat &amp; Sentinel, classification supervisée Random Forest, évaluation de la précision par indice kappa.</p>
+            <div class="doc-meta">
+              <span><i class="bx bx-calendar"></i> Sept. 2024 – Juin 2025</span>
+              <span><i class="bx bx-file"></i> 6,18 Mo</span>
+            </div>
+          </div>
+          <div class="doc-actions">
+            <a href="docs/memoire_final.pdf" target="_blank" rel="noopener" class="doc-btn doc-btn-view">
+              <i class="bx bx-show"></i> Consulter
+            </a>
+            <a href="docs/memoire_final.pdf" download class="doc-btn doc-btn-dl">
+              <i class="bx bx-download"></i> Télécharger
+            </a>
+          </div>
+        </div>
+
+        <div class="doc-card" data-cat="analyse">
+          <div class="doc-card-top">
+            <div class="doc-icon">
+              <i class="bx bxs-file-pdf"></i>
+            </div>
+            <span class="doc-badge analyse">Analyse</span>
+          </div>
+          <div class="doc-body">
+            <h3>Morpho-émissivités urbaines à Kaunas</h3>
+            <p>Analyse thermique et structurale en milieu urbain. Étude des relations entre forme urbaine, émissivité de surface et îlots de chaleur urbains à partir d'images satellites.</p>
+            <div class="doc-meta">
+              <span><i class="bx bx-buildings"></i> AMU</span>
+              <span><i class="bx bx-file"></i> 1,84 Mo</span>
+            </div>
+          </div>
+          <div class="doc-actions">
+            <a href="docs/analyse%20des%20morphoemissivites%20urbaines%20a%20Kaunas.pdf" target="_blank" rel="noopener" class="doc-btn doc-btn-view">
+              <i class="bx bx-show"></i> Consulter
+            </a>
+            <a href="docs/analyse%20des%20morphoemissivites%20urbaines%20a%20Kaunas.pdf" download class="doc-btn doc-btn-dl">
+              <i class="bx bx-download"></i> Télécharger
+            </a>
+          </div>
+        </div>
+
+        <div class="doc-card" data-cat="sig">
+          <div class="doc-card-top">
+            <div class="doc-icon">
+              <i class="bx bxs-file-pdf"></i>
+            </div>
+            <span class="doc-badge sig">SIG &amp; Carto</span>
+          </div>
+          <div class="doc-body">
+            <h3>Cartographie des phénomènes géographiques</h3>
+            <p>Analyse et représentation cartographique de phénomènes géographiques. Méthodes de sémiologie graphique, choix de représentation et production de cartes thématiques sous SIG.</p>
+            <div class="doc-meta">
+              <span><i class="bx bx-buildings"></i> AMU</span>
+              <span><i class="bx bx-file"></i> 4,50 Mo</span>
+            </div>
+          </div>
+          <div class="doc-actions">
+            <a href="docs/cartographie%20analyse%20des%20phenomenes%20geographiques.pdf" target="_blank" rel="noopener" class="doc-btn doc-btn-view">
+              <i class="bx bx-show"></i> Consulter
+            </a>
+            <a href="docs/cartographie%20analyse%20des%20phenomenes%20geographiques.pdf" download class="doc-btn doc-btn-dl">
+              <i class="bx bx-download"></i> Télécharger
+            </a>
+          </div>
+        </div>
+
+        <div class="doc-card" data-cat="analyse">
+          <div class="doc-card-top">
+            <div class="doc-icon">
+              <i class="bx bxs-file-pdf"></i>
+            </div>
+            <span class="doc-badge analyse">Analyse</span>
+          </div>
+          <div class="doc-body">
+            <h3>GIS &amp; Spatial Analysis</h3>
+            <p>Travaux pratiques avancés en SIG et analyse spatiale. Traitement de données géographiques, analyses multicritères, statistiques spatiales et production cartographique.</p>
+            <div class="doc-meta">
+              <span><i class="bx bx-calendar"></i> Janv. 2026</span>
+              <span><i class="bx bx-file"></i> 4,06 Mo</span>
+            </div>
+          </div>
+          <div class="doc-actions">
+            <a href="docs/Gis%20and%20spatial%20Analysis_%20(1).pdf" target="_blank" rel="noopener" class="doc-btn doc-btn-view">
+              <i class="bx bx-show"></i> Consulter
+            </a>
+            <a href="docs/Gis%20and%20spatial%20Analysis_%20(1).pdf" download class="doc-btn doc-btn-dl">
+              <i class="bx bx-download"></i> Télécharger
+            </a>
+          </div>
+        </div>
+
+        <div class="doc-card" data-cat="sig">
+          <div class="doc-card-top">
+            <div class="doc-icon">
+              <i class="bx bxs-file-pdf"></i>
+            </div>
+            <span class="doc-badge sig">SIG &amp; Carto</span>
+          </div>
+          <div class="doc-body">
+            <h3>Dossier SIG — Khaly Magatte Bane</h3>
+            <p>Production SIG complète : intégration de données multi-sources, géotraitements, analyse spatiale et cartographie thématique. Travaux réalisés dans le cadre de la formation à Aix-Marseille Université.</p>
+            <div class="doc-meta">
+              <span><i class="bx bx-calendar"></i> Août 2025</span>
+              <span><i class="bx bx-file"></i> 2,71 Mo</span>
+            </div>
+          </div>
+          <div class="doc-actions">
+            <a href="docs/SIG_Khaly%20Magatte%20BANE%20(3).pdf" target="_blank" rel="noopener" class="doc-btn doc-btn-view">
+              <i class="bx bx-show"></i> Consulter
+            </a>
+            <a href="docs/SIG_Khaly%20Magatte%20BANE%20(3).pdf" download class="doc-btn doc-btn-dl">
+              <i class="bx bx-download"></i> Télécharger
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FORMATION ===== -->
+  <section class="section section-formation" id="formation">
+    <div class="boxed">
+      <div class="exp-header">
+        <span class="section-kicker">ACADÉMIQUE</span>
+        <h2>Parcours de formation</h2>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card active">
+          <div class="edu-year">Depuis sept. 2025</div>
+          <div class="edu-degree">Master 2</div>
+          <div class="edu-field">Géomatique &amp; Modélisation Spatiale</div>
+          <div class="edu-school"><i class="bx bx-buildings"></i> Aix-Marseille Université</div>
+          <span class="edu-status">En cours</span>
+        </div>
+        <div class="edu-card">
+          <div class="edu-year">2024 — 2025</div>
+          <div class="edu-degree">Master 1</div>
+          <div class="edu-field">Géomatique &amp; Modélisation Spatiale</div>
+          <div class="edu-school"><i class="bx bx-buildings"></i> Aix-Marseille Université</div>
+          <span class="edu-status done">Obtenu</span>
+        </div>
+        <div class="edu-card">
+          <div class="edu-year">2023 — 2024</div>
+          <div class="edu-degree">Licence 3</div>
+          <div class="edu-field">Géographie &amp; Aménagement</div>
+          <div class="edu-school"><i class="bx bx-buildings"></i> Aix-Marseille Université</div>
+          <span class="edu-status done">Obtenu</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section section-contact" id="contact">
+    <div class="boxed">
+      <div class="contact-head text-center">
+        <span class="section-kicker section-kicker-light">RESTONS EN LIEN</span>
+        <h2 class="contact-title">Contact</h2>
+        <p class="contact-subtitle">Disponible dès septembre 2026 · Mobile partout en France.<br>N'hésitez pas à me contacter pour toute opportunité ou collaboration scientifique.</p>
+      </div>
+      <div class="contact-cards">
+        <a class="contact-card" href="mailto:khaly-magatte.bane@etu.univ-amu.fr" aria-label="Envoyer un email">
+          <div class="contact-icon"><i class="bx bx-envelope"></i></div>
+          <div class="contact-content">
+            <h3>Email</h3>
+            <p class="contact-value">khaly-magatte.bane@etu.univ-amu.fr</p>
+            <span class="contact-cta">Écrire un message <i class="bx bx-right-arrow-alt"></i></span>
+          </div>
+        </a>
+        <a class="contact-card" href="tel:+33773717399" aria-label="Appeler">
+          <div class="contact-icon"><i class="bx bx-phone"></i></div>
+          <div class="contact-content">
+            <h3>Téléphone</h3>
+            <p class="contact-value">+33 7 73 71 73 99</p>
+            <span class="contact-cta">Appeler maintenant <i class="bx bx-right-arrow-alt"></i></span>
+          </div>
+        </a>
+        <a class="contact-card" href="https://linkedin.com/in/khaly-magatte-bane-173724242" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <div class="contact-icon"><i class="bx bxl-linkedin"></i></div>
+          <div class="contact-content">
+            <h3>LinkedIn</h3>
+            <p class="contact-value">khaly-magatte-bane-173724242</p>
+            <span class="contact-cta">Voir le profil <i class="bx bx-right-arrow-alt"></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner boxed">
+      <div class="footer-left">
+        <p class="footer-name">Khaly Magatte Bane</p>
+        <p class="footer-role">Géomaticien — SIG, Cartographie &amp; Télédétection</p>
+        <p class="footer-avail">Disponible dès septembre 2026</p>
+      </div>
+      <nav class="footer-nav" aria-label="Navigation pied de page">
+        <a href="#apropos">À propos</a>
+        <a href="#competences">Compétences</a>
+        <a href="#experience">Expériences</a>
+        <a href="#results">Résultats</a>
+        <a href="#cartographie">Cartographie</a>
+        <a href="#formation">Formation</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-right">
+        <p class="footer-copy">© 2026 KMB</p>
+        <p class="footer-sub">Aix-Marseille Université<br>UMR EDYSAN · CNRS 7058</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Galerie d'images">
+    <button class="lb-close" id="lbClose" aria-label="Fermer">&times;</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Précédent">&#8249;</button>
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Suivant">&#8250;</button>
+    <div class="lb-content">
+      <img id="lbImg" src="" alt="" />
+      <p id="lbCaption"></p>
+    </div>
+    <div class="lb-counter" id="lbCounter"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

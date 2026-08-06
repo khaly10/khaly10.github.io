@@ -1,0 +1,10 @@
+# Outils / éditeur
+.claude/
+
+# Fichiers de travail non publiés
+index.backup.html
+
+# Fichiers volumineux non utilisés par le site
+documents/
+Presentation_Erosion.pptx
+CV_BANE (2).pdf
