@@ -1,6 +1,38 @@
 'use strict';
 
 /* =========================
+   THÈME CLAIR / SOMBRE
+   ========================= */
+(function () {
+  const root = document.documentElement;
+  const btn  = document.getElementById('themeToggle');
+  const icon = document.getElementById('themeIcon');
+  if (!btn || !icon) return;
+
+  function apply(theme) {
+    root.setAttribute('data-theme', theme);
+    const isLight = theme === 'light';
+    icon.className = isLight ? 'bx bx-moon' : 'bx bx-sun';
+    btn.setAttribute('aria-label', isLight ? 'Passer en thème sombre' : 'Passer en thème clair');
+  }
+
+  apply(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+
+  btn.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    apply(next);
+  });
+
+  // Suit le thème du système tant qu'aucun choix manuel n'est mémorisé
+  window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
+    let saved = null;
+    try { saved = localStorage.getItem('theme'); } catch (err) {}
+    if (!saved) apply(e.matches ? 'light' : 'dark');
+  });
+})();
+
+/* =========================
    NAVBAR
    ========================= */
 (function () {
