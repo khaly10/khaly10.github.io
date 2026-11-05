@@ -110,7 +110,7 @@
     for (let i = 1; i <= 5; i++) {
       ctx.beginPath();
       ctx.arc(cx, cy, (maxR / 5) * i, 0, Math.PI * 2);
-      ctx.strokeStyle = 'rgba(74,222,128,0.1)';
+      ctx.strokeStyle = 'rgba(94,181,132,0.1)';
       ctx.lineWidth = 1;
       ctx.stroke();
     }
@@ -119,7 +119,7 @@
       ctx.beginPath();
       ctx.moveTo(cx, cy);
       ctx.lineTo(cx + maxR * Math.cos(a), cy + maxR * Math.sin(a));
-      ctx.strokeStyle = 'rgba(74,222,128,0.06)';
+      ctx.strokeStyle = 'rgba(94,181,132,0.06)';
       ctx.stroke();
     }
 
@@ -129,8 +129,8 @@
     ctx.translate(cx, cy);
     ctx.rotate(angle);
     const sweep = ctx.createLinearGradient(0, 0, maxR, 0);
-    sweep.addColorStop(0, 'rgba(74,222,128,0.35)');
-    sweep.addColorStop(1, 'rgba(74,222,128,0)');
+    sweep.addColorStop(0, 'rgba(94,181,132,0.35)');
+    sweep.addColorStop(1, 'rgba(94,181,132,0)');
     ctx.beginPath();
     ctx.moveTo(0, 0);
     ctx.arc(0, 0, maxR, -sweepAngle / 2, sweepAngle / 2);
@@ -140,7 +140,7 @@
     ctx.beginPath();
     ctx.moveTo(0, 0);
     ctx.lineTo(maxR, 0);
-    ctx.strokeStyle = 'rgba(74,222,128,0.65)';
+    ctx.strokeStyle = 'rgba(94,181,132,0.65)';
     ctx.lineWidth = 1.5;
     ctx.stroke();
     ctx.restore();
@@ -153,12 +153,12 @@
       if (a < 0.01) return;
       ctx.beginPath();
       ctx.arc(dot.x, dot.y, dot.size, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(74,222,128,${a})`;
+      ctx.fillStyle = `rgba(94,181,132,${a})`;
       ctx.fill();
       if (a > 0.5) {
         ctx.beginPath();
         ctx.arc(dot.x, dot.y, dot.size * 2.5, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(74,222,128,${a * 0.2})`;
+        ctx.fillStyle = `rgba(94,181,132,${a * 0.2})`;
         ctx.fill();
       }
     });
@@ -171,44 +171,6 @@
   window.addEventListener('resize', resize);
   draw();
 })();
-
-/* =========================
-   SKILL LEVEL BARS (scroll reveal)
-   ========================= */
-const lvlObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.querySelectorAll('.lvl-fill').forEach(bar => {
-        bar.style.width = bar.dataset.w + '%';
-      });
-      lvlObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.25 });
-
-document.querySelectorAll('.skill-card-v2').forEach(card => lvlObserver.observe(card));
-
-/* =========================
-   SKILL CARD TOGGLE
-   ========================= */
-document.addEventListener('click', function (e) {
-  const btn = e.target.closest('.skill-toggle');
-  if (!btn) return;
-  const card = btn.closest('.skill-card-v2');
-  if (!card) return;
-
-  // Fermer les autres
-  document.querySelectorAll('.skill-card-v2.open').forEach(el => {
-    if (el !== card) {
-      el.classList.remove('open');
-      const b = el.querySelector('.skill-toggle');
-      if (b) b.textContent = 'En savoir plus…';
-    }
-  });
-
-  card.classList.toggle('open');
-  btn.textContent = card.classList.contains('open') ? 'Voir moins' : 'En savoir plus…';
-});
 
 /* =========================
    DOCUMENTS FILTER
@@ -229,47 +191,10 @@ document.addEventListener('click', function (e) {
       docCards.forEach(card => {
         const match = filter === 'all' || card.dataset.cat === filter;
         card.classList.toggle('hidden', !match);
-        // Ré-animer à l'apparition
-        if (match) {
-          card.style.animation = 'none';
-          card.offsetHeight; // reflow
-          card.style.animation = '';
-        }
       });
     });
   });
 })();
-
-/* =========================
-   TIMELINE REVEAL
-   ========================= */
-const timelineObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('visible');
-  });
-}, { threshold: 0.15 });
-
-document.querySelectorAll('.timeline-item').forEach(item => timelineObserver.observe(item));
-
-/* =========================
-   SCROLL REVEAL (cartes)
-   ========================= */
-const revealObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.kstat, .context-card, .gallery-item, .edu-card, .astat, .doc-card').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  revealObserver.observe(el);
-});
 
 /* =========================
    LIGHTBOX
